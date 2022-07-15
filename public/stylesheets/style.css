@@ -1,0 +1,233 @@
+/* Disclaimer: This is not an example of excellent CSS */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  --light-border: 1px solid lightgray;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background:white;
+  color: white;
+}
+
+/* customize scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 12px;  /* for vertical scrollbars */
+  height: 12px; /* for horizontal scrollbars */
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+body {
+  height: 100vh;
+  padding: 2vw;
+  flex-direction: column;
+  display: flex;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h1 {
+  text-align: center;
+  color: #696969;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+h2 {
+  text-align: center;
+  color: #ccc;
+}
+h3 {
+  text-align: center;
+  color: #ccc;
+}
+
+main > * {
+  flex: 1 1 320px;
+  margin: 1%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+section .scrollbox {
+  flex: 1 0 50vh;
+}
+
+
+
+textarea {
+  resize: none;
+  height: 3rem;
+}
+
+input, textarea {
+  border: var(--light-border);
+}
+
+input[type="submit"] {
+  font-weight: bold;
+}
+
+.scrollbox {
+  box-shadow: 0 0 0 1px #fff; /* add border but border is broken */
+  padding: 3%;
+  overflow-y: scroll;
+}
+
+.teletype {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+input:hover:not(:focus) {
+  box-shadow: inset 0 0 100px 100px rgba(238, 251, 50, 0.15);
+}
+
+input[type="submit"] {
+  background:#E0E0E0;
+  color: white;
+  font-size: 100%;
+  line-height: 200%;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 100px 100px rgba(50, 251, 93, 0.15);
+}
+
+@keyframes flash {
+  from {background-color: rgba(255, 255, 0, 0.3)}
+  to {background-color: rgba(255, 255, 0, 0)}
+}
+
+.flashing {
+  animation: flash 0.3s;
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  --main-color: #647C90;
+}
+
+a:visited {
+  color: var(--main-color);
+}
+
+.header {
+  color: var(--main-color);
+  text-align: center;
+}
+
+.nav-bar {
+  font-size: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.component {
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.form-container > * {
+  margin: 0.5rem;
+  margin-bottom: 50px;
+}
+
+.form-container input {
+  font-size: 1.2em;
+}
+
+.short-item-actions {
+  margin: 10px 0px;
+}
+
+.short-item-actions * {
+  margin-right: 20px;
+}
+
+.primary-header {
+  font-size: 4em;
+  margin-bottom: 4%;
+}
+
+.secondary-header {
+  font-size: 3em;
+  margin-bottom: 1%;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.subcontainer {
+  width: 50%;
+  margin: 5%;
+  overflow-wrap: break-word;
+}
+
+.short-form-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.short-form-container form input {
+  font-size: 1.2em;
+  margin: 2%;
+}
+
+.button {
+  background-color: deepskyblue;
+  border-radius: 10px;
+  margin: 4%;
+  padding: 2%;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.shorts-container {
+  height: 500px;
+  overflow: auto;
+  padding-right: 40px;
+}
+
+.short-container-popular {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 30px 0px;
+  padding-left: 3%;
+  background-color: #e8f48c;
+}
+
+.short-container {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 30px 0px;
+  padding-left: 3%;
+  background-color: #DCD2CC;
+}
+
+.short-name {
+  font-size: 2em;
+}
